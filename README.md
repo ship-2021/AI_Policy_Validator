@@ -1,5 +1,5 @@
-\# AI Policy Validation Platform
-
+**AI Policy Validation Platform
+**
 
 
 A hybrid AI system that validates cloud resources against security and
@@ -10,11 +10,11 @@ with \*\*RAG + LLM reasoning\*\* for ambiguous, natural-language policies.
 
 
 
-\---
 
 
 
-\## 1. What It Does
+
+ 1. What It Does
 
 
 
@@ -32,11 +32,11 @@ Example request:
 
 {
 
-&#x20; "resource\_type": "database",
+ "resource\_type": "database",
 
-&#x20; "resource\_name": "customer-db",
+ "resource\_name": "customer-db",
 
-&#x20; "attributes": { "public\_access": true }
+ "attributes": { "public\_access": true }
 
 }
 
@@ -44,19 +44,19 @@ Example request:
 
 {
 
-&#x20; "source": "deterministic\_rule",
+ "source": "deterministic\_rule",
 
-&#x20; "policy\_id": "DB-001",
+ "policy\_id": "DB-001",
 
-&#x20; "status": "FAIL",
+ "status": "FAIL",
 
-&#x20; "reason": "Production databases must not be publicly accessible."
+ "reason": "Production databases must not be publicly accessible."
 
 }
 
 
 
-2\. Why Hybrid (Rules + LLM)?
+2. Why Hybrid (Rules + LLM)?
 
 Case	Engine	Reason
 
@@ -74,7 +74,7 @@ hallucination risk at scale.
 
 
 
-3\. Architecture
+3 Architecture
 
 text
 
