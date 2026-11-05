@@ -1,0 +1,25 @@
+policies:
+  - id: DB-001
+    name: Production Database Public Access
+    description: >
+      Production databases must not be publicly accessible from the internet.
+      Database network access must be restricted to approved private networks,
+      security groups, or internal application services.
+    resource_type: database
+    severity: critical
+
+  - id: DB-002
+    name: Database Encryption
+    description: >
+      Production databases must use encryption at rest to protect sensitive
+      and confidential information.
+    resource_type: database
+    severity: high
+
+  - id: DB-003
+    name: Database Backup
+    description: >
+      Production databases must have automated backups enabled to support
+      disaster recovery and business continuity.
+    resource_type: database
+    severity: high
