@@ -362,35 +362,17 @@ Policy quality: PASS/FAIL accuracy, false positives/negatives, REVIEW rate, huma
 
 ☑ LLM validator with structured JSON output
 
-□ Agent orchestration (in progress)
+□ Agent orchestration 
 
-□ Docker containerization
+□ Docker containerization (in Progress)
 
-□ CI/CD pipeline
+□ CI/CD pipeline (in Progress)
 
-□ AWS deployment architecture
+□ AWS deployment architecture (in Progress)
 
-□ Monitoring + Responsible AI controls
+□ Monitoring + Responsible AI controls (in progress)
 
 
 
-I built a prototype AI-powered policy validation platform. The system
 
-exposes a FastAPI endpoint where resources are submitted for policy
-
-validation. I started with deterministic Python rules for predictable
-
-controls, then added semantic retrieval using embeddings so relevant
-
-policies are found by meaning rather than keywords. I integrated an LLM
-
-to interpret ambiguous policy requirements and return structured
-
-validation results. The architecture is hybrid: deterministic rules
-
-handle known controls, RAG/LLM reasoning handles complex cases. The
-
-next layers are agent orchestration, containerization with Docker,
-
-cloud deployment on AWS, CI/CD, and monitoring."
 
