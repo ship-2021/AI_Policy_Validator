@@ -75,54 +75,30 @@ hallucination risk at scale.
 
 
 3 Architecture
-
-text
-
-&#x20;                ┌─────────────────────┐
-
-&#x20;                │  Policy Documents   │  (YAML / S3)
-
-&#x20;                └──────────┬──────────┘
-
-&#x20;                           │
-
-&#x20;                    Embeddings (RAG)
-
-&#x20;                           │
-
-&#x20;                           ▼
-
+                 ┌─────────────────────┐
+                 │  Policy Documents   │  (YAML / S3)
+                 └──────────┬──────────┘
+                            │
+                     Embeddings (RAG)
+                            │
+                            ▼
 Client ──► FastAPI ──► Policy Agent
+                         │       │
+                 ┌───────┘       └────────┐
+                 ▼                        ▼
+          Rule Engine                  RAG + LLM
+        (deterministic)               (reasoning)
+                 │                        │
+                 └──────────┬─────────────┘
+                            ▼
+                   PASS / FAIL / REVIEW
+                            │
+              ┌─────────────┼─────────────┐
+              ▼             ▼             ▼
+            Audit       Monitoring    Human Review
+                        (CloudWatch)
 
-&#x20;                        │       │
-
-&#x20;                ┌───────┘       └────────┐
-
-&#x20;                ▼                        ▼
-
-&#x20;         Rule Engine                  RAG + LLM
-
-&#x20;       (deterministic)               (reasoning)
-
-&#x20;                │                        │
-
-&#x20;                └──────────┬─────────────┘
-
-&#x20;                           ▼
-
-&#x20;                  PASS / FAIL / REVIEW
-
-&#x20;                           │
-
-&#x20;             ┌─────────────┼─────────────┐
-
-&#x20;             ▼             ▼             ▼
-
-&#x20;           Audit       Monitoring    Human Review
-
-&#x20;                       (CloudWatch)
-
-4\. Tech Stack
+4 Tech Stack
 
 Layer	Technology
 
