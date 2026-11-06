@@ -340,13 +340,7 @@ Policy quality: PASS/FAIL accuracy, false positives/negatives, REVIEW rate, huma
 
 □ Agent orchestration 
 
-□ Docker containerization (in Progress)
 
-□ CI/CD pipeline (in Progress)
-
-□ AWS deployment architecture (in Progress)
-
-□ Monitoring + Responsible AI controls (in progress)
 
 
 
