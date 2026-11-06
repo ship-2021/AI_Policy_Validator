@@ -1,28 +1,12 @@
-**AI Policy Validation Platform
-**
+# AI Policy Validation Platform
 
-
-A hybrid AI system that validates cloud resources against security and
-
-compliance policies. It combines \*\*deterministic rule-based validation\*\*
-
-with \*\*RAG + LLM reasoning\*\* for ambiguous, natural-language policies.
-
-
-
-
-
-
-
- 1. What It Does
-
-
-
-Submit a resource (e.g. a database) and the platform decides whether it
-
-\*\*PASSES\*\*, \*\*FAILS\*\*, or needs \*\*REVIEW\*\* against your policies.
-
-
+A built, working AI system that validates cloud resources against security
+and compliance policies. Resources are submitted to a FastAPI endpoint for
+validation. Validation starts with deterministic Python rules for
+predictable controls, then uses semantic retrieval (embeddings) so relevant
+policies are found by meaning rather than keywords, and integrates an LLM
+for ambiguous, natural-language policies. The result is a structured
+PASS / FAIL / REVIEW outcome.
 
 Example request:
 
